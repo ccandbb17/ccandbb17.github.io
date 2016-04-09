@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Categories
+title: 目录
 permalink: /categories/
 ---
 
-Click on a category to see relevent posts.
+点击目录查看相关博客文章。
 
 <ul class="categories">
 {% for category in site.categories %}
   {% assign c = category | first %}
   {% assign posts = category | last %}
-  <li><a href="/categories/#{{c | downcase | replace:" ","-" }}">{{ c | downcase }}</a> has {{ posts | size }} posts</li>
+  <li><a href="/categories/#{{c | downcase | replace:" ","-" }}">{{ c | downcase }}</a> {{ posts | size }}篇</li>
 {% endfor %}
 </ul>
 
@@ -26,7 +26,7 @@ Click on a category to see relevent posts.
   {% if post.categories contains c %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
-    <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
   </li>
   {% endif %}
 {% endfor %}

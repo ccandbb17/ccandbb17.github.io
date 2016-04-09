@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Tags
+title: 标签
 permalink: /tags/
 ---
 
-Click on a tag to see relevant list of posts.
+点击标签查看相关博客文章。
 
 <ul class="tags">
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
-  <li><a href="/tag/#{{t | downcase | replace:" ","-" }}">{{ t | downcase }}</a> has {{ posts | size }} posts</li>
+  <li><a href="/tag/#{{t | downcase | replace:" ","-" }}">{{ t | downcase }}</a> {{ posts | size }}篇</li>
 {% endfor %}
 </ul>
 
@@ -26,7 +26,7 @@ Click on a tag to see relevant list of posts.
   {% if post.tags contains t %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
-    <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
   </li>
   {% endif %}
 {% endfor %}
