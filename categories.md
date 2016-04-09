@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 目录
+title: 分组
 permalink: /categories/
 ---
 
-点击目录查看相关博客文章。
+请点击各分组查看相关博客文章。
 
 <ul class="categories">
 {% for category in site.categories %}

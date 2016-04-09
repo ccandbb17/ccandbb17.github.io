@@ -4,7 +4,7 @@ title: 标签
 permalink: /tags/
 ---
 
-点击标签查看相关博客文章。
+请点击各标签查看相关博客文章。
 
 <ul class="tags">
 {% for tag in site.tags %}
